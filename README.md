@@ -1,10 +1,20 @@
-# `(import (letloop template))`
+# `(import (letloop blake3))`
 
-Abstract description...
+## `(make-blake3)`
 
-## `(procedure one two)` `type?` `type?` → `type?`
+Returns a handle called *hasher* used to compute a hash with several
+steps.
 
-Description...
+## `(blake3-update! hasher bytevector)`
 
+Update the state of *hasher* with `BYTEVECTOR`.
+
+## `(blake3-finalize hasher length)` → `bytevector?`
+
+Returns the hash as bytevector.
+
+## `(blake3 bytevector)` `bytevector?` → `bytevector?`
+
+Returns the hash of `BYTEVECTOR` as bytevector.
 
 
